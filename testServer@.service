@@ -1,14 +1,14 @@
 [Unit]
-Description=Test Server
-After=docker.service
-Requires=docker.service
+#Description=Test Server
+#After=docker.service
+#Requires=docker.service
 
 [Service]
-User=core
-ExecStartPre=/bin/bash -c '/usr/bin/docker run --rm -v /opt/bin:/opt/bin ibuildthecloud/systemd-docker && /usr/bin/docker pull '
-ExecStart=/bin/bash -c '/opt/bin/systemd-docker run --name stupidservice -p 9000:8000 quay.io/seanmcgary/stupid-server'
-TimeoutStartSec=0
-Restart=always
-RestartSec=10s
-Type=notify
-NotifyAccess=all
+#User=core
+#ExecStartPre=/bin/bash -c '/usr/bin/docker run --rm -v /opt/bin:/opt/bin ibuildthecloud/systemd-docker && /usr/bin/docker pull '
+#ExecStart=/bin/bash -c '/opt/bin/systemd-docker run --name stupidservice -p 9000:8000 quay.io/seanmcgary/stupid-server'
+#TimeoutStartSec=0
+#Restart=always
+#RestartSec=10s
+#ype=notify
+#NotifyAccess=all
